@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CN7 Transcriptor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Inter', 'sans-serif'], // Changed from Orbitron to Inter for sober look
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+            },
+            colors: {
+              cyber: {
+                black: '#050505',
+                dark: '#0f0f11',
+                gray: '#1f1f22',
+                yellow: '#facc15', // Yellow-400
+                yellowDim: '#eab308', // Yellow-500
+              }
+            },
+            boxShadow: {
+              'neon': '0 0 5px rgba(250, 204, 21, 0.5), 0 0 20px rgba(250, 204, 21, 0.3)',
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body class="bg-cyber-black text-slate-200 antialiased selection:bg-cyber-yellow selection:text-black">
+    <div id="root"></div>
+  </body>
+</html>
